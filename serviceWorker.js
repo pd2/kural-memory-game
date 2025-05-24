@@ -2,10 +2,10 @@ const staticDev = "kural_memory_game"
 const service_worker_version = "v2.0221"
 const assets = [
   "/",
-  "/index.html",
-  "/style.css",
-  "/thirukkural.txt",
-  "/script.js"
+  "index.html",
+  "style.css",
+  "thirukkural.txt",
+  "script.js"
 ]
 
 self.addEventListener("install", installEvent => {
