@@ -17,7 +17,7 @@ let quotes;
 
 async function get_kurals() {
   
-  let responses = await fetch('/thirukkural.txt');
+  let responses = await fetch('thirukkural.txt');
   
   let quotes_all = await responses.json();
   
