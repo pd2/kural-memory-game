@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJQMX18FTK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EJQMX18FTK');
+  </script>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="icon" href="https://cdn.glitch.global/4d18e5c9-8de1-46aa-ab79-54d734f21fba/Kural_memory_game.png?v=1697387989485" >
+    <link rel="manifest" href="/manifest.json" >
+    
+    <title>Thirukkural memory game</title>
+    <link rel="stylesheet" href="/style.css" >
+    <script src="DragDropTouch.js" defer></script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Thirukkural memory game
+      </h1>
+    </header>
+    
+    <p id="info">
+      Practice your memory skills on a verse by Thiruvalluvar. 
+      When you get it right, you will see the meaning of the Kural.
+      <br>
+      <br> Click the start game button to begin
+    </p>
+    <button type="button" class="button" id="start">
+      Start Game <i class="rocket"></i>
+    </button>
+    <p id="reference"></p>
+    <p id="quote"></p>
+    <p id="message"></p>
+    
+    <p class="tooltip"><div>
+      <button id="share" onclick="ShareIt()" onmouseout="outFunc()">
+      <span class="tooltiptext" id="myTooltip">Copy to clipboard</span></button>
+    </div></p>
+    
+    <p id="meaning"></p>
+    <div id="image"><img class="img" draggable="false" src="https://cdn.glitch.global/4d18e5c9-8de1-46aa-ab79-54d734f21fba/Thiruvalluvar.jpg"></div>
+    
+    <div id="dropZone">
+    <template id="dropBox">
+    <span class="droppable" ondrop="drop(event)" ondragover="allowDrop(event)"></span>
+    </template>
+    </div>
+    <p id ="words" ondrop="multiItemsDrop(event)" ondragover="allowMultipleDrop(event)"></p>    
+    
+    <button type="button" class="button" id="check">Check</button>
+    <main>
+    <p id="settings"><div>
+      Kural progression:
+    <input type="radio" id="rand" name="is_rand" value="1"><label for="rand"> Random </label>
+    <input type="radio" id="seq"  name="is_rand" value="0" checked="checked"><label for="seq"> Sequential </label>
+    </div></p>
+    </main>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("service worker registered"))
+            .catch(err => console.log("service worker not registered", err))
+        })
+      }
+    </script>
+  <footer>
+    <span style="white-space: nowrap"> &copy; 2023 <a href="https://www.pradeepd.com/hobbies/apps">Pradeep D</a>, <a href="https://www.iseek.page">iSeek</a>. Ref: Ramachandra Dikshitar, "tirukkuRaL in english", projectmadurai.org</span>
+    <br> <a href="https://www.buymeacoffee.com/pradeepde">Buy me a coffee</a>
+  </footer>
+  </body>
+</html>
