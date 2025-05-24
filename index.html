@@ -13,12 +13,12 @@
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <link rel="icon" href="https://cdn.glitch.global/4d18e5c9-8de1-46aa-ab79-54d734f21fba/Kural_memory_game.png?v=1697387989485" >
-    <link rel="manifest" href="/manifest.json" >
+    <link rel="manifest" href="manifest.json" >
     
     <title>Thirukkural memory game</title>
-    <link rel="stylesheet" href="/style.css" >
+    <link rel="stylesheet" href="style.css" >
     <script src="DragDropTouch.js" defer></script>
-    <script src="/script.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -67,7 +67,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function() {
           navigator.serviceWorker
-            .register("/serviceWorker.js")
+            .register("serviceWorker.js")
             .then(res => console.log("service worker registered"))
             .catch(err => console.log("service worker not registered", err))
         })
