@@ -293,7 +293,7 @@ var copyText;
 
 function ShareIt() {
   
-  let linkURL = "https://kural-memory-game.glitch.me";
+  let linkURL = window.location.href;
   
   copyText = `#Thirukkural I learnt the meaning of kural no. ${(ad_index)*10+ku_index/2+1} in ${Math.round(elapsedTime/1000)} sec at ${linkURL}`;
   
