@@ -1,7 +1,6 @@
 const staticDev = "kural_memory_game"
 const service_worker_version = "v2.023"
 const assets = [
-  "/",
   "index.html",
   "style.css",
   "thirukkural.txt",
