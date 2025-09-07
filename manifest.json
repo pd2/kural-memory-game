@@ -4,12 +4,12 @@
   "start_url": "https://pd2.github.io/kural-memory-game/",
   "icons": [
     {
-      "src": "https://cdn.glitch.global/4d18e5c9-8de1-46aa-ab79-54d734f21fba/Kural_memory_game.png",
+      "src": "assets/Kural_memory_game.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.glitch.global/4d18e5c9-8de1-46aa-ab79-54d734f21fba/Kural_memory_game.png",
+      "src": "assets/Kural_memory_game.png",
       "sizes": "256x256",
       "type": "image/png"
     }
