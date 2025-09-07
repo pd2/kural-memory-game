@@ -272,7 +272,7 @@ function gameOver() {
   check.style.display = "none";
   share.style.display = "block";
   
-  image.innerHTML = `<img class="img" draggable="false" src="https://cdn.glitch.global/4d18e5c9-8de1-46aa-ab79-54d734f21fba/Thiruvalluvar.jpg?v=1697388716735">`
+  image.innerHTML = `<img class="img" draggable="false" src="assets/Thiruvalluvar.jpg?v=1697388716735">`
 
   document.body.className = "image";
   // document.body.className = "winner";
