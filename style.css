@@ -124,7 +124,7 @@ button {
   width: 60px;
   height: 34px;
   margin-left: 20px;
-  background: url(https://cdn.glitch.global/4adcabc2-60b0-4638-899f-af1599e3ba61/rocket.png?v=1695663248265)
+  background: url(assets/rocket.png?v=1695663248265)
     right center no-repeat;
   background-size: 60px;
 }
@@ -225,7 +225,7 @@ button {
 }
 
 .winner {
-  background-image: url(https://cdn.glitch.global/4adcabc2-60b0-4638-899f-af1599e3ba61/confetti.gif?v=1695663103834);
+  background-image: url(assets/confetti.gif?v=1695663103834);
 }
 
 .img {
