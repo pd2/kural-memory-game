@@ -327,7 +327,7 @@ function get_history() {
   const noItemsFound_ad = 0, noItemsFound_ku = -2, noItemsFound_lastPlayedTs = 0;
   const ad = localStorage.getItem('ad_index') || noItemsFound_ad;
   const ku = localStorage.getItem('ku_index') || noItemsFound_ku;
-  const lpts = localStorage.getItem('lpts') || noItemsFound_lastPlayedTs;
+  const lpts = localStorage.getItem('kural_lpts') || noItemsFound_lastPlayedTs;
   
   ad_index = JSON.parse(ad);
   ku_index = JSON.parse(ku);
@@ -340,7 +340,7 @@ function save_history() {
   const lpts = JSON.stringify(kural_lastPlayedTs);
   localStorage.setItem('ad_index', ad);
   localStorage.setItem('ku_index', ku);
-  localStorage.setItem('lpts', lpts);
+  localStorage.setItem('kural_lpts', lpts);
 }
 
 get_history();
