@@ -154,7 +154,7 @@ function startGame() {
       }
     }
   }
-  tamil_quoteText = tamil_kurals[(ad_index)*10+ku_index/2+1];
+  tamil_quoteText = tamil_kurals[(ad_index)*10+ku_index/2];
   quoteText = quotes[ad_index][ku_index];
   wordQueue = quoteText.split(" ");
 
