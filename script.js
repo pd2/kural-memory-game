@@ -106,7 +106,7 @@ function multiItemsDrop(event) {
   event.currentTarget.appendChild(document.getElementById(data));
 }
 
-let wordQueue, quoteText, highlightPosition, startTime, ad_index = 0, ku_index = -2, is_playing = false;
+let wordQueue, tamil_quoteText, quoteText, highlightPosition, startTime, ad_index = 0, ku_index = -2, is_playing = false;
 let Guess = [], cur_guess;
 let num_tries, is_random;
 
@@ -201,6 +201,7 @@ function checkOrder() {
   
   if (is_playing == false) {
     is_playing = true;
+    tamil_quote.style.display = "none";
     quote.style.display = "none";
     dropZone.style.display = "flex";
     words.style.display = "revert";
@@ -212,6 +213,7 @@ function checkOrder() {
   dropZone.style.display = "none";
   words.style.display = "none";
   words.className = '';
+  tamil_quote.style.display = "revert";
   quote.style.display = "revert";
   check.innerHTML = `Retry`;
   
