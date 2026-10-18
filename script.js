@@ -170,7 +170,7 @@ function startGame() {
   }
 
   reference.innerHTML = `Atikāram: ${ad_index+1}, Kuraḻ: ${(ad_index)*10+ku_index/2+1}`
-  quote.innerHTML = tamil_quoteText;
+  tamil_quote.innerHTML = tamil_quoteText;
   quote.innerHTML = quoteText;
   words.innerHTML = shuffle(wordQueue).map((word, index) => `<div id="word${index+1}" class="draggable" draggable="true" ondragstart="drag(event)"><span class="word">${word}</span></div>`).join(" ");
   
@@ -267,7 +267,7 @@ function gameOver() {
     <span class="congrats">Congrats!</span>
     <br> You finished in ${elapsedTime/1000} seconds with ${num_tries} tries
     `;
-  tamil_quote.innerHTML = `<span class="quote">Kuraḻ: ${tamil_kurals[ad_index*10+ku_index/2]}</span>`;
+  tamil_quote.innerHTML = `<span class="quote">திருக்குறள்: ${tamil_kurals[ad_index*10+ku_index/2]}</span>`;
   quote.innerHTML = `<span class="quote">Kuraḻ: ${quotes[ad_index][ku_index]}</span>`;
   meaning.innerHTML = `<span class="meaning">Meaning: ${quotes[ad_index][ku_index+1]}</span>`;
   
