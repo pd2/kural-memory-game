@@ -1,4 +1,5 @@
 const reference = document.getElementById("reference");
+const tamil_quote = document.getElementById("tamil_quote");
 const quote = document.getElementById("quote");
 const check = document.getElementById("check");
 const input = document.getElementById("typedValue");
@@ -13,7 +14,7 @@ const settings = document.getElementById("settings");
 const share =  document.getElementById("share");
 const tooltip = document.getElementById("myTooltip");
 
-let quotes;
+let quotes, tamil_kurals;
 
 async function get_kurals() {
   
@@ -24,6 +25,7 @@ async function get_kurals() {
   // console.log(quotes_all);
   
   quotes = quotes_all.kurals;
+  tamil_kurals = quotes_all.tamil_kurals;
   
 }
 
@@ -242,7 +244,7 @@ function checkOrder() {
 let elapsedTime;
 
 function gameOver() {
-  
+  tamil_quote.style.display = "revert";
   quote.style.display = "revert";
   dropZone.style.display = "flex";
   words.style.display = "revert";
@@ -260,7 +262,7 @@ function gameOver() {
     <span class="congrats">Congrats!</span>
     <br> You finished in ${elapsedTime/1000} seconds with ${num_tries} tries
     `;
-  
+  tamil_quote.innerHTML = `<span class="quote">Kuraḻ: ${tamil_quotes[ad_index*10+ku_index/2]}</span>`;
   quote.innerHTML = `<span class="quote">Kuraḻ: ${quotes[ad_index][ku_index]}</span>`;
   meaning.innerHTML = `<span class="meaning">Meaning: ${quotes[ad_index][ku_index+1]}</span>`;
   
