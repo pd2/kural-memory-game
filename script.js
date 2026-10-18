@@ -154,6 +154,7 @@ function startGame() {
       }
     }
   }
+  tamil_quoteText = tamil_kurals[(ad_index)*10+ku_index/2+1];
   quoteText = quotes[ad_index][ku_index];
   wordQueue = quoteText.split(" ");
 
@@ -169,12 +170,14 @@ function startGame() {
   }
 
   reference.innerHTML = `Atikāram: ${ad_index+1}, Kuraḻ: ${(ad_index)*10+ku_index/2+1}`
+  quote.innerHTML = tamil_quoteText;
   quote.innerHTML = quoteText;
   words.innerHTML = shuffle(wordQueue).map((word, index) => `<div id="word${index+1}" class="draggable" draggable="true" ondragstart="drag(event)"><span class="word">${word}</span></div>`).join(" ");
   
   startTime = new Date().getTime();
   
   document.body.className = "";
+  tamil_quote.style.display = "revert";
   quote.style.display = "revert";
   dropZone.style.display = "none";
   words.style.display = "none";
